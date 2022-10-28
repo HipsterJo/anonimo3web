@@ -1,13 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import '@coreui/coreui/dist/css/coreui.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+html,
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-zinc-900  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+}
+
+.swiper-pagination-horizontal {
+  
+  @apply  w-[30%] !important;
+}
+
+.swiper-pagination-bullet{
+  background-color: #797979ea !important;
+  opacity: 1 !important;
+  height: 0.8rem  !important;
+  width: 0.8rem  !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #6437a8 !important;
+
+
+}
+
+
+
+h3{
+  @apply text-[#dad9d9] text-3xl font-semibold  mb-3;
+}
+
+h4{
+  @apply  text-xl font-semibold  mb-3;
+}
+h5{
+  @apply   text-[#c9c7c7] text-2xl font-semibold  mb-3;
+}
+
+
+
+
+
+
+
+@layer components {
+  .btn-play-purple {
+    @apply py-1 px-3 bg-[#5a2e98] text-white font-semibold rounded shadow-md hover:bg-[#6437a8] focus:outline-none;
+  }
+  
+  .numberScore-first {
+    @apply text-[#1E1E1F] text-7xl    font-bold ;
+    -webkit-text-stroke: 2px #5A2E98;
+  }
+  .numberScore-second {
+    @apply text-[#1E1E1F] text-7xl  font-bold;
+    -webkit-text-stroke: 2px #9E2A2B;
+  }
+  .numberScore-third {
+    @apply text-[#1E1E1F] text-7xl font-bold;
+    -webkit-text-stroke: 2px #099804;
+  }
+  .numberScore{
+    @apply text-[#1E1E1F] text-7xl font-bold;
+    -webkit-text-stroke: 2px #464646;
+  }
+  
+}
+
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif !important;
 }

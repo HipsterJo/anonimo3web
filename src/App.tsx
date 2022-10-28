@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import {useState} from 'react';
+
+import Header from './components/Header';
+import Footer from './components/Footer/Footer';
+import MainPage from './pages/mainPage';
+import AnimePage from './pages/anime';
+import Modal from './components/Modal/Modal';
+import ModalWindow from './components/Modal/LoginWindow/LoginWindow';
 
 function App() {
+  const[modalActive, setModal] = useState<boolean>(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header  active = {modalActive} setActive={setModal}/>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/anime/:id" element={<AnimePage />} />
+        
+      </Routes>
+      <Footer />
+      <React.Fragment>  
+              <ModalWindow active={modalActive} setActive={setModal}>
+                <Modal/>
+            </ModalWindow>
+      </React.Fragment> 
+    </BrowserRouter>
   );
 }
 

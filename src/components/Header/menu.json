@@ -1,0 +1,66 @@
+{
+            "dropdownContent": [
+            {
+                "name": "HOME",
+                "path": "/",
+                "_id": "home"
+            },
+            {
+                "name": "GENRE",
+                "path": "/genre",
+                "_id": "genre"
+            },
+            {
+                "name": "TYPES",
+                "path": "/donate",
+                "_id": "donate"
+            },
+            {
+                "name": "NEWEST",
+                "path": "/newest",
+                "_id": "newest"
+            },
+            {
+                "name": "UPDATED",
+                "path": "/updated",
+                "_id": "updated"
+            },
+            {
+                "name": "ONGOING",
+                "path": "/ongoing",
+                "_id": "ongoing"
+            },
+            {
+                "name": "ADDED",
+                "path": "/added",
+                "_id": "added"
+            },
+            {
+                "name": "REQUEST",
+                "path": "/request",
+                "_id": "request"
+            }],
+
+            "categories":[
+                {
+                    "name": "Watch2Together",
+                    "path": "/watch2together",
+                    "_id": "watch2together",
+                    "icon": "TbArrowsJoin"
+                  },
+                  {
+                    "name": "Random",
+                    "path": "/random",
+                    "_id": "anList",
+                    "icon": "GiPerspectiveDiceSixFacesRandom"
+                  },
+                  {
+                    "name": "Donate",
+                    "path": "/donate",
+                    "_id": "donate",
+                    "icon": "FaDonate"
+                  }
+            ]
+
+}
+
