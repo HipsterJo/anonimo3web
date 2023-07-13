@@ -7,6 +7,7 @@ export const login = createAsyncThunk(
     async (obj:InitialRegister) => {
         const {email, password} = obj;
         const response = await AuthService.login(email, password);
+        console.log('MY RESPONSE', response.data);
         return response.data;
 })
 

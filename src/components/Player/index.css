@@ -1,0 +1,19 @@
+.w-playbar-wrapper{
+    background-color: #6437a8;
+    color: #c9c7c7;
+}
+.w-vulcan-icon-wrapper{
+    background-color: #6437a8;
+}
+
+.player-wrapper {
+    @apply col-span-5
+  }
+  .react-player {
+    padding-top: 56.25%; 
+    position: relative; 
+  }
+  
+  .react-player > div {
+    position: absolute; 
+  }
